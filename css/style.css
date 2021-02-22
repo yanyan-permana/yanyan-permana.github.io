@@ -1,19 +1,25 @@
-.slider h3,
-.slider h5,
-.clients h3 {
-	text-shadow: 1px 1px 3px rgba(0,0,0,.5);
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #ecf0f5;
 }
 
-.parallax-container { height: 20%; }
-
-.parallax img {
-	filter: grayscale(1);
-	opacity: .5 !important;
+.sec1{
+    margin-top: 100px;
+    min-height: 300px;
 }
 
-.clients img {
-	max-width: 150px;
-	filter: drop-shadow(1px 1px 1px rgba(0,0,0,.8));
+.sec2{
+    margin-top: 100px;
+    min-height: 450px;
+    background-color: #fff;
 }
 
-section, footer { padding: 20px 0; }
+.sec3{
+    margin-top: 80px;
+    min-height: 500px;
+}
+
+footer {
+    min-height: 150px;
+    background-color: #fff;
+}
