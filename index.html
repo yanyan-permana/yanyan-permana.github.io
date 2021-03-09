@@ -11,6 +11,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link rel="stylesheet" href="css/style.css">
+
+    <style>
+      .card {
+        border: none;
+      }
+    </style>
     
 
     <title>Yanyan Permana</title>
@@ -19,7 +25,9 @@
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light shadow p-3 mb-5 bg-white rounded fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="#">Yanyan Permana</a>
+          <a class="navbar-brand" href="#">
+            <img src="img/stt.png" width="50" height="50" alt="">
+          </a>
         </div>
     </nav>
 
@@ -43,45 +51,45 @@
 
         <div class="row">
             <div class="col-md-4">
-                <img src="img/html.png" width="200" style="display: block; margin: auto;">
+                <img class="sec2-img" src="img/html.png" width="200" style="display: block; margin: auto;">
                 <h3 class="mt-3 text-center">HTML 5</h3>
             </div>
             <div class="col-md-4">
-                <img src="img/css.png" width="200" style="display: block; margin: auto;">
+                <img class="sec2-img" src="img/css.png" width="200" style="display: block; margin: auto;">
                 <h3 class="mt-3 text-center">CSS 3</h3>
             </div>
             <div class="col-md-4">
-                <img src="img/js.png" width="200" style="display: block; margin: auto;">
+                <img class="sec2-img" src="img/js.png" width="200" style="display: block; margin: auto;">
                 <h3 class="mt-3 text-center">JAVASCRIPT</h3>
             </div>
         </div>
 
         <div class="row mt-5">
             <div class="col-md-4">
-                <img src="img/php.png" width="200" style="display: block; margin: auto;">
+                <img class="sec2-img" src="img/php.png" width="200" style="display: block; margin: auto;">
                 <h3 class="mt-3 text-center">PHP</h3>
             </div>
             <div class="col-md-4">
-                <img src="img/mysql.png" width="200" style="display: block; margin: auto;">
+                <img class="sec2-img" src="img/mysql.png" width="200" style="display: block; margin: auto;">
                 <h3 class="mt-3 text-center">MYSQL</h3>
             </div>
             <div class="col-md-4">
-                <img src="img/bootstrap.png" width="200" style="display: block; margin: auto;">
+                <img class="sec2-img" src="img/bootstrap.png" width="200" style="display: block; margin: auto;">
                 <h3 class="mt-3 text-center">BOOTSTRAP</h3>
             </div>
         </div>
 
         <div class="row mt-5">
             <div class="col-md-4 mb-5">
-                <img src="img/codeigniter.png" width="200" style="display: block; margin: auto;">
+                <img class="sec2-img" src="img/codeigniter.png" width="200" style="display: block; margin: auto;">
                 <h3 class="mt-3 text-center">CODEIGNITER</h3>
             </div>
             <div class="col-md-4 mb-5">
-                <img src="img/laravel.png" width="200" style="display: block; margin: auto;">
+                <img class="sec2-img" src="img/laravel.png" width="200" style="display: block; margin: auto;">
                 <h3 class="mt-3 text-center">LARAVEL</h3>
             </div>
             <div class="col-md-4 mb-5">
-                <img src="img/jquey.png" width="200" style="display: block; margin: auto;">
+                <img class="sec2-img" src="img/jquey.png" width="200" style="display: block; margin: auto;">
                 <h3 class="mt-3 text-center">JQUERY</h3>
             </div>
         </div>
@@ -96,7 +104,7 @@
 
         <div class="row">
             <div class="col-md-4 mb-3">
-              <div class="card">
+              <div class="card shadow">
                 <img src="img/pos.png" class="card-img-top">
                 <div class="card-body">
                   <h5 class="card-title">Point Of Sale</h5>
@@ -106,7 +114,7 @@
             </div>
 
             <div class="col-md-4 mb-3">
-              <div class="card">
+              <div class="card shadow">
                 <img src="img/voting.png" class="card-img-top">
                 <div class="card-body">
                   <h5 class="card-title">E - Voting</h5>
@@ -116,11 +124,21 @@
             </div>
 
             <div class="col-md-4 mb-3">
-              <div class="card">
+              <div class="card shadow">
                 <img src="img/kost.png" class="card-img-top">
                 <div class="card-body">
                   <h5 class="card-title">Penyewaan Penginapan</h5>
                   <p class="card-text text-justify">Penyewaan Penginapan ini masih dalam tahap progress yang dibuat menggunakan framework codeigniter 3 dan bootstrap 4</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4 mb-3">
+              <div class="card shadow">
+                <img src="img/wisudawan.png" class="card-img-top">
+                <div class="card-body">
+                  <h5 class="card-title">Absensi Wisudawan Qr Code</h5>
+                  <p class="card-text text-justify">Absensi Wisudawan Qr Code berfungsi untuk mengecek posisi kursi mereka melalui qr code yang tertera diundangan mereka yang dibuat menggunakan framework codeigniter 3 dan bootstrap 4</p>
                 </div>
               </div>
             </div>
@@ -139,7 +157,7 @@
               <a href="https://wa.me/62895361152485" target="_blank" class="ml-2"><i class="fab fa-whatsapp"></i></a>
               <a href="https://www.youtube.com/channel/UCJWjpRT26Pv4-aV6NtKDYhg" target="_blank" class="ml-2"><i class="fab fa-youtube"></i></a>
               <a href="https://github.com/yanyan-permana" target="_blank" class="ml-2"><i class="fab fa-github"></i></a>
-              <p class="small text-secondary mt-3">Developed By &hearts; Yanyan Permana 2021</p>
+              <p class="small text-secondary mt-3">Developed By &hearts; Yanyan Permana</p>
             </div>
           </div>
         </div>
@@ -147,7 +165,8 @@
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   </body>
