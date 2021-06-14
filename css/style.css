@@ -1,0 +1,47 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+
+header {
+    margin-top: 20px;
+}
+
+.navbar {
+    min-height: 100px;
+}
+
+
+.sec1 {
+    min-height: 550px;
+    /* background-color: cadetblue; */
+}
+
+
+.sec2 {
+    min-height: 550px;
+    /* background-color: cadetblue; */
+}
+
+
+.sec3 {
+    min-height: 550px;
+    /* background-color: cadetblue; */
+}
+
+
+.sec4 {
+    min-height: 550px;
+    /* background-color: cadetblue; */
+}
+
+
+.sec5 {
+    min-height: 550px;
+    /* background-color: cadetblue; */
+}
+
+
+.card {
+    border: none;
+}
