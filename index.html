@@ -1,174 +1,336 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- Required meta tags -->
+    
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
     <link rel="stylesheet" href="css/style.css">
 
-    <style>
-      .card {
-        border: none;
-      }
-    </style>
-    
-
-    <title>Yanyan Permana</title>
+    <title>Portofolio</title>
   </head>
   <body>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow p-3 mb-5 bg-white rounded fixed-top">
+    <!-- header -->
+    <header>
         <div class="container">
-          <a class="navbar-brand" href="#">
-            <img src="img/stt.png" width="50" height="50" alt="">
-          </a>
+            <div class="row justify-content-end">
+                <div class="col-md-6 mt-5 text-right">
+                    <a href="" class="ml-3 text-secondary"><i class="fab fa-facebook-f"></i></a>
+                    <a href="" class="ml-3 text-secondary"><i class="fab fa-github"></i></a>
+                    <a href="" class="ml-3 text-secondary"><i class="fab fa-youtube"></i></a>
+                    <a href="" class="ml-3 text-secondary"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- /header-->
+
+    
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="img/logo stt.png" width="50" height="50" alt="">
+              </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+        
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Tentang</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Skill</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Portofolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Kontak</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
 
-    <div class="sec1">
-      <div class="container">
-        <h1 class="pt-5">Hallo Semuanya</h1>
-        <p>
-          Perkenalkan sama saya Yanyan Permana asal dari Tasikmalaya
-          <br>
-          Saya seorang Junior Web Developer dengan semangat yang kuat untuk mempelajari hal-hal baru.
-        </p>
-        <hr>
-      </div>
-    </div>
-
-    <div class="sec2">
-      <div class="container">
-
-        <h1 class="pt-5">Skill Saya</h1>
-        <hr>
-
-        <div class="row">
-            <div class="col-md-4">
-                <img class="sec2-img" src="img/html.png" width="200" style="display: block; margin: auto;">
-                <h3 class="mt-3 text-center">HTML 5</h3>
-            </div>
-            <div class="col-md-4">
-                <img class="sec2-img" src="img/css.png" width="200" style="display: block; margin: auto;">
-                <h3 class="mt-3 text-center">CSS 3</h3>
-            </div>
-            <div class="col-md-4">
-                <img class="sec2-img" src="img/js.png" width="200" style="display: block; margin: auto;">
-                <h3 class="mt-3 text-center">JAVASCRIPT</h3>
-            </div>
-        </div>
-
-        <div class="row mt-5">
-            <div class="col-md-4">
-                <img class="sec2-img" src="img/php.png" width="200" style="display: block; margin: auto;">
-                <h3 class="mt-3 text-center">PHP</h3>
-            </div>
-            <div class="col-md-4">
-                <img class="sec2-img" src="img/mysql.png" width="200" style="display: block; margin: auto;">
-                <h3 class="mt-3 text-center">MYSQL</h3>
-            </div>
-            <div class="col-md-4">
-                <img class="sec2-img" src="img/bootstrap.png" width="200" style="display: block; margin: auto;">
-                <h3 class="mt-3 text-center">BOOTSTRAP</h3>
-            </div>
-        </div>
-
-        <div class="row mt-5">
-            <div class="col-md-4 mb-5">
-                <img class="sec2-img" src="img/codeigniter.png" width="200" style="display: block; margin: auto;">
-                <h3 class="mt-3 text-center">CODEIGNITER</h3>
-            </div>
-            <div class="col-md-4 mb-5">
-                <img class="sec2-img" src="img/laravel.png" width="200" style="display: block; margin: auto;">
-                <h3 class="mt-3 text-center">LARAVEL</h3>
-            </div>
-            <div class="col-md-4 mb-5">
-                <img class="sec2-img" src="img/jquey.png" width="200" style="display: block; margin: auto;">
-                <h3 class="mt-3 text-center">JQUERY</h3>
-            </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="sec3">
-      <div class="container">
-
-        <h1>Project Saya</h1>
-        <hr>
-
-        <div class="row">
-            <div class="col-md-4 mb-3">
-              <div class="card shadow">
-                <img src="img/pos.png" class="card-img-top">
-                <div class="card-body">
-                  <h5 class="card-title">Point Of Sale</h5>
-                  <p class="card-text text-justify">Point of sale ini yaitu aplikasi kasir penjualan yang dibuat menggunakan framework codeigniter 3 dan bootstrap 4</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-4 mb-3">
-              <div class="card shadow">
-                <img src="img/voting.png" class="card-img-top">
-                <div class="card-body">
-                  <h5 class="card-title">E - Voting</h5>
-                  <p class="card-text text-justify">E - Voting ini yaitu aplikasi pemilihan untuk ketua osis dan wakil osis yang dibuat menggunakan framework codeigniter 3 dan bootstrap 4</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-4 mb-3">
-              <div class="card shadow">
-                <img src="img/kost.png" class="card-img-top">
-                <div class="card-body">
-                  <h5 class="card-title">Penyewaan Penginapan</h5>
-                  <p class="card-text text-justify">Penyewaan Penginapan ini masih dalam tahap progress yang dibuat menggunakan framework codeigniter 3 dan bootstrap 4</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-4 mb-3">
-              <div class="card shadow">
-                <img src="img/wisudawan.png" class="card-img-top">
-                <div class="card-body">
-                  <h5 class="card-title">Absensi Wisudawan Qr Code</h5>
-                  <p class="card-text text-justify">Absensi Wisudawan Qr Code berfungsi untuk mengecek posisi kursi mereka melalui qr code yang tertera diundangan mereka yang dibuat menggunakan framework codeigniter 3 dan bootstrap 4</p>
-                </div>
-              </div>
-            </div>
-        </div>
-
-
-      </div>
-    </div>
-
-    <footer>
+    
+    <!-- section1 -->
+    <section class="sec1" data-aos="fade-up"
+    data-aos-offset="200"
+    data-aos-delay="50"
+    data-aos-duration="1000">
         <div class="container">
-          <div class="row">
-            <div class="col-md-6 mt-5">
-              <h6 class="text-secondary">Media Sosial</h6>
-              <a href="https://web.facebook.com/uciha.onoy/" target="_blank" class="ml-2"><i class="fab fa-facebook"></i></a>
-              <a href="https://wa.me/62895361152485" target="_blank" class="ml-2"><i class="fab fa-whatsapp"></i></a>
-              <a href="https://www.youtube.com/channel/UCJWjpRT26Pv4-aV6NtKDYhg" target="_blank" class="ml-2"><i class="fab fa-youtube"></i></a>
-              <a href="https://github.com/yanyan-permana" target="_blank" class="ml-2"><i class="fab fa-github"></i></a>
-              <p class="small text-secondary mt-3">Developed By &hearts; Yanyan Permana</p>
+            <div class="row">
+                <div class="col-md-6" style="margin-top: 100px;">
+                    <button type="button" class="btn btn-primary">Hello I'm</button>
+                    <h1 class="mt-3 text-secondary">Yanyan Permana</h1>
+                    <h5 class="text-secondary">Web Developer</h5>
+                    <p class="small mt-3 text-secondary"><i class="fas fa-envelope"></i> deyanyan6@gmail.com</p>
+                    <p class="small mt-3 text-secondary"><i class="fas fa-phone"></i> +62895361152485</p>
+                    <p class="small mt-3 text-secondary"><i class="fas fa-map-marker-alt"></i> Singaparna Tasikmalaya Jawa Barat</p>
+                </div>
+                <div class="col-md-6 mt-5">
+                    <img src="img/sasuke.png" class="rounded-circle shadow-lg" width="400">
+                </div>
             </div>
-          </div>
         </div>
-    </footer>
+    </section>
+    <!-- /section1 -->
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!-- section2 -->
+    <section class="sec2">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6" style="margin-top: 100px;" data-aos="fade-right"
+                data-aos-offset="200"
+                data-aos-delay="50"
+                data-aos-duration="1000">
+                    <img src="img/about.png" width="500">
+                </div>
+                <div class="col-md-6" style="margin-top: 100px;" data-aos="fade-left"
+                data-aos-offset="200"
+                data-aos-delay="50"
+                data-aos-duration="1000">
+                    <h1 class="text-secondary">About Me</h1>
+                    <p class="text-secondary">Hello, I’m a Yanyan Permana, web-developer. I have rich experience in web site design & building and customization. Also I am good at</p>
+                    <span class="badge badge-primary">html</span>
+                    <span class="badge badge-primary">css</span>
+                    <span class="badge badge-primary">bootstrap</span>
+                    <span class="badge badge-primary">javascript</span>
+                    <span class="badge badge-primary">jquery</span>
+                    <span class="badge badge-primary">php</span>
+                    <span class="badge badge-primary">codeigniter</span>
+                    <span class="badge badge-primary">laravel</span>
+                    <span class="badge badge-primary">mysql</span>
+                    <a href="" class="btn btn-outline-primary mt-3">Download CV <i class="fas fa-download"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /section2 -->
+
+
+    <!-- section3 -->
+    <!-- <section class="sec3">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1 class="text-center text-secondary">What I Do</h1>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-md-4">
+                    <div class="card shadow">
+                        <div class="card-body">
+                          <h5 class="card-title text-secondary">Graphic Desginer</h5>
+                          <p class="card-text text-secondary small">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card shadow">
+                        <div class="card-body">
+                          <h5 class="card-title text-secondary">Web Development</h5>
+                          <p class="card-text text-secondary small">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card shadow">
+                        <div class="card-body">
+                          <h5 class="card-title text-secondary">Content Creator</h5>
+                          <p class="card-text text-secondary small">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+    <!-- /section3 -->
+
+    <!-- section4 -->
+    <section class="sec4">
+        <div class="container">
+            <div class="row" data-aos="flip-left"
+            data-aos-offset="200"
+            data-aos-delay="50"
+            data-aos-duration="1000">
+                <div class="col-md-12">
+                    <h1 class="text-center text-secondary">Skills</h1>
+                </div>
+            </div>
+            <div class="row mt-5 justify-content-center" data-aos="zoom-in-up"
+            data-aos-offset="200"
+            data-aos-delay="50"
+            data-aos-duration="1000">
+                <div class="col-md-3">
+                    <div class="card shadow">
+                        <img src="img/html.png" class="card-img-top">
+                        <div class="card-body">
+                          <h5 class="card-title text-center text-secondary">HTML</h5>
+                        </div>
+                      </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card shadow">
+                        <img src="img/css.png" class="card-img-top">
+                        <div class="card-body">
+                          <h5 class="card-title text-center text-secondary">CSS</h5>
+                        </div>
+                      </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card shadow">
+                        <img src="img/js.png" class="card-img-top">
+                        <div class="card-body">
+                          <h5 class="card-title text-center text-secondary">JAVASCRIPT</h5>
+                        </div>
+                      </div>
+                </div>
+            </div>
+            <div class="row mt-5 justify-content-center" data-aos="zoom-in-up"
+            data-aos-offset="200"
+            data-aos-delay="50"
+            data-aos-duration="1000">
+                <div class="col-md-3">
+                    <div class="card shadow">
+                        <img src="img/jquey.png" class="card-img-top">
+                        <div class="card-body">
+                          <h5 class="card-title text-center text-secondary">JQUERY</h5>
+                        </div>
+                      </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card shadow">
+                        <img src="img/bootstrap.png" class="card-img-top">
+                        <div class="card-body">
+                          <h5 class="card-title text-center text-secondary">BOOTSTRAP</h5>
+                        </div>
+                      </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card shadow">
+                        <img src="img/php.png" class="card-img-top">
+                        <div class="card-body">
+                          <h5 class="card-title text-center text-secondary">PHP</h5>
+                        </div>
+                      </div>
+                </div>
+            </div>
+            <div class="row mt-5 justify-content-center" data-aos="zoom-in-up"
+            data-aos-offset="200"
+            data-aos-delay="50"
+            data-aos-duration="1000">
+                <div class="col-md-3">
+                    <div class="card shadow">
+                        <img src="img/codeigniter.png" class="card-img-top">
+                        <div class="card-body">
+                          <h5 class="card-title text-center text-secondary">CODEIGNITER</h5>
+                        </div>
+                      </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card shadow">
+                        <img src="img/laravel.png" class="card-img-top">
+                        <div class="card-body">
+                          <h5 class="card-title text-center text-secondary">LARAVEL</h5>
+                        </div>
+                      </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card shadow">
+                        <img src="img/mysql.png" class="card-img-top">
+                        <div class="card-body">
+                          <h5 class="card-title text-center text-secondary">MYSQL</h5>
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /section4 -->
+
+    
+
+
+    <!-- section5 -->
+    <section class="sec4">
+        <div class="container">
+            <div class="row mt-5" data-aos="flip-left"
+            data-aos-offset="200"
+            data-aos-delay="50"
+            data-aos-duration="1000">
+                <div class="col-md-12">
+                    <h1 class="text-center text-secondary">Portofolio</h1>
+                </div>
+            </div>
+
+            <div class="row mt-5">
+                <div class="col-md-4 mb-3">
+                  <div class="card shadow">
+                    <img src="img/pos.png" class="card-img-top">
+                    <div class="card-body">
+                      <h5 class="card-title text-secondary">Point Of Sale</h5>
+                      <p class="card-text text-justify text-secondary">Point of sale ini yaitu aplikasi kasir penjualan yang dibuat menggunakan framework codeigniter 3 dan bootstrap 4</p>
+                    </div>
+                  </div>
+                </div>
+    
+                <div class="col-md-4 mb-3">
+                  <div class="card shadow">
+                    <img src="img/voting.png" class="card-img-top">
+                    <div class="card-body">
+                      <h5 class="card-title text-secondary">E - Voting</h5>
+                      <p class="card-text text-justify text-secondary">E - Voting ini yaitu aplikasi pemilihan untuk ketua osis dan wakil osis yang dibuat menggunakan framework codeigniter 3 dan bootstrap 4</p>
+                    </div>
+                  </div>
+                </div>
+    
+                <div class="col-md-4 mb-3">
+                  <div class="card shadow">
+                    <img src="img/kost.png" class="card-img-top">
+                    <div class="card-body">
+                      <h5 class="card-title text-secondary">Penyewaan Penginapan</h5>
+                      <p class="card-text text-justify text-secondary">Penyewaan Penginapan ini masih dalam tahap progress yang dibuat menggunakan framework codeigniter 3 dan bootstrap 4</p>
+                    </div>
+                  </div>
+                </div>
+    
+                <div class="col-md-4 mb-3">
+                  <div class="card shadow">
+                    <img src="img/wisudawan.png" class="card-img-top">
+                    <div class="card-body">
+                      <h5 class="card-title text-secondary">Absensi Wisudawan Qr Code</h5>
+                      <p class="card-text text-justify text-secondary">Absensi Wisudawan Qr Code berfungsi untuk mengecek posisi kursi mereka melalui qr code yang tertera diundangan mereka yang dibuat menggunakan framework codeigniter 3 dan bootstrap 4</p>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /section5 -->
+
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" integrity="sha512-RXf+QSDCUQs5uwRKaDoXt55jygZZm2V++WUZduaU/Ui/9EGp3f/2KZVahFZBKGH0s774sd3HmrhUy+SgOFQLVQ==" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  
   </body>
 </html>
-
