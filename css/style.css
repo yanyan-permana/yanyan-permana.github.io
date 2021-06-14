@@ -36,12 +36,30 @@ header {
 }
 
 
-.sec5 {
-    min-height: 550px;
-    /* background-color: cadetblue; */
-}
-
-
 .card {
     border: none;
+}
+
+@media screen and (max-width: 400px) {
+    header {
+        /* display: none; */
+    }
+
+    .sec1 {
+        margin-top: -40px;
+        text-align: center;
+    }
+
+    .img-sec1 {
+        width: 250px;
+    }
+
+    .sec2 {
+        margin-top: 55px;
+        text-align: center;
+    }
+
+    .col-2-sec2 {
+        margin-top: -40px;
+    }
 }
