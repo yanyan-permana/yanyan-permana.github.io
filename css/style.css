@@ -1,25 +1,47 @@
 body {
-    font-family: 'Montserrat', sans-serif;
-    background-color: #f4f9ff;
+    font-family: 'Roboto', sans-serif;
 }
 
-.sec1{
-    margin-top: 100px;
-    min-height: 300px;
+
+header {
+    margin-top: 20px;
 }
 
-.sec2{
-    margin-top: 100px;
-    min-height: 450px;
-    background-color: #fff;
+.navbar {
+    min-height: 100px;
 }
 
-.sec3{
-    margin-top: 80px;
-    min-height: 500px;
+
+.sec1 {
+    min-height: 550px;
+    /* background-color: cadetblue; */
 }
 
-footer {
-    min-height: 150px;
-    background-color: #fff;
+
+.sec2 {
+    min-height: 550px;
+    /* background-color: cadetblue; */
+}
+
+
+.sec3 {
+    min-height: 550px;
+    /* background-color: cadetblue; */
+}
+
+
+.sec4 {
+    min-height: 550px;
+    /* background-color: cadetblue; */
+}
+
+
+.sec5 {
+    min-height: 550px;
+    /* background-color: cadetblue; */
+}
+
+
+.card {
+    border: none;
 }
