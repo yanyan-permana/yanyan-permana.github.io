@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yan Yan Permana — Web Developer</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --blue: #2563EB;
+      --blue-light: #EFF6FF;
+      --blue-mid: #BFDBFE;
+      --blue-dark: #1D4ED8;
+      --text-primary: #111827;
+      --text-secondary: #6B7280;
+      --text-muted: #9CA3AF;
+      --bg: #FFFFFF;
+      --bg-soft: #F9FAFB;
+      --border: #E5E7EB;
+      --border-light: #F3F4F6;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      color: var(--text-primary);
+      background: var(--bg);
+    }
+
+    /* NAV */
+    .navbar {
+      background: rgba(255,255,255,0.92) !important;
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-light);
+      padding: 0.875rem 0;
+    }
+
+    .navbar-brand {
+      font-family: 'DM Mono', monospace;
+      font-size: 15px;
+      color: var(--text-primary) !important;
+    }
+
+    .navbar-brand span { color: var(--blue); }
+
+    .nav-link {
+      font-size: 14px;
+      color: var(--text-secondary) !important;
+      transition: color 0.2s;
+    }
+
+    .nav-link:hover { color: var(--blue) !important; }
+
+    /* HERO */
+    #home {
+      padding-top: 130px;
+      padding-bottom: 80px;
+      background: var(--bg);
+    }
+
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+      font-family: 'DM Mono', monospace;
+      color: var(--blue);
+      background: var(--blue-light);
+      border: 1px solid var(--blue-mid);
+      padding: 4px 14px;
+      border-radius: 100px;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-eyebrow::before {
+      content: '';
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--blue);
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.3; }
+    }
+
+    .hero-title {
+      font-size: clamp(2.2rem, 5vw, 3.4rem);
+      font-weight: 300;
+      line-height: 1.15;
+      letter-spacing: -0.03em;
+      margin-bottom: 1.25rem;
+    }
+
+    .hero-title strong {
+      font-weight: 500;
+      color: var(--blue);
+    }
+
+    .hero-desc {
+      font-size: 16px;
+      color: var(--text-secondary);
+      line-height: 1.75;
+      max-width: 520px;
+      margin-bottom: 2rem;
+    }
+
+    .btn-primary-custom {
+      background: var(--blue);
+      color: #fff;
+      border: none;
+      padding: 10px 22px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 500;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: background 0.2s, transform 0.15s;
+    }
+
+    .btn-primary-custom:hover {
+      background: var(--blue-dark);
+      color: #fff;
+      transform: translateY(-1px);
+    }
+
+    .btn-ghost-custom {
+      background: transparent;
+      color: var(--text-secondary);
+      border: 1px solid var(--border);
+      padding: 10px 22px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 400;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: border-color 0.2s, color 0.2s, transform 0.15s;
+    }
+
+    .btn-ghost-custom:hover {
+      border-color: var(--blue);
+      color: var(--blue);
+      transform: translateY(-1px);
+    }
+
+    .social-icon {
+      width: 36px; height: 36px;
+      border-radius: 50%;
+      border: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-size: 15px;
+      transition: border-color 0.2s, color 0.2s;
+    }
+
+    .social-icon:hover { border-color: var(--blue); color: var(--blue); }
+
+    /* SECTIONS */
+    .section-label {
+      font-size: 12px;
+      font-family: 'DM Mono', monospace;
+      color: var(--blue);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 0.4rem;
+    }
+
+    .section-title {
+      font-size: 1.75rem;
+      font-weight: 400;
+      letter-spacing: -0.02em;
+      margin-bottom: 2.5rem;
+    }
+
+    section { padding: 5rem 0; }
+    .bg-soft { background: var(--bg-soft); }
+
+    /* STAT CARD */
+    .stat-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.25rem;
+    }
+
+    .stat-number {
+      font-size: 2rem;
+      font-weight: 500;
+      color: var(--blue);
+      font-family: 'DM Mono', monospace;
+      line-height: 1;
+    }
+
+    .stat-label {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-top: 4px;
+    }
+
+    /* SKILL */
+    .skill-category {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.25rem;
+      height: 100%;
+    }
+
+    .skill-category-title {
+      font-size: 11px;
+      font-family: 'DM Mono', monospace;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+      margin-bottom: 0.75rem;
+    }
+
+    .skill-tag {
+      font-size: 12px;
+      font-weight: 500;
+      background: var(--bg-soft);
+      border: 1px solid var(--border);
+      color: var(--text-primary);
+      padding: 3px 10px;
+      border-radius: 100px;
+      display: inline-block;
+      margin: 2px;
+    }
+
+    .skill-tag.highlight {
+      background: var(--blue-light);
+      border-color: var(--blue-mid);
+      color: var(--blue-dark);
+    }
+
+    /* TIMELINE */
+    .timeline { position: relative; padding-left: 1.5rem; }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 8px; bottom: 0;
+      width: 1px;
+      background: var(--border);
+    }
+
+    .timeline-item { position: relative; margin-bottom: 2.5rem; }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -1.5rem; top: 7px;
+      width: 7px; height: 7px;
+      border-radius: 50%;
+      background: var(--blue);
+      border: 2px solid var(--bg-soft);
+      outline: 1px solid var(--blue);
+    }
+
+    .timeline-date {
+      font-size: 12px;
+      font-family: 'DM Mono', monospace;
+      color: var(--text-muted);
+      margin-bottom: 3px;
+    }
+
+    .timeline-company { font-size: 14px; font-weight: 500; }
+
+    .timeline-role {
+      font-size: 13px;
+      color: var(--blue);
+      margin-bottom: 10px;
+    }
+
+    .timeline-desc { list-style: none; padding: 0; }
+
+    .timeline-desc li {
+      font-size: 13.5px;
+      color: var(--text-secondary);
+      padding-left: 1rem;
+      position: relative;
+      margin-bottom: 4px;
+    }
+
+    .timeline-desc li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: var(--border);
+    }
+
+    /* PROJECT CARD */
+    .project-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.25rem;
+      transition: border-color 0.2s, transform 0.2s;
+      height: 100%;
+    }
+
+    .project-card:hover {
+      border-color: var(--blue-mid);
+      transform: translateY(-2px);
+    }
+
+    .project-icon {
+      width: 36px; height: 36px;
+      background: var(--blue-light);
+      border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      color: var(--blue);
+      margin-bottom: 0.75rem;
+    }
+
+    .project-title { font-size: 14px; font-weight: 500; margin-bottom: 4px; }
+
+    .project-desc {
+      font-size: 13px;
+      color: var(--text-secondary);
+      line-height: 1.6;
+      margin-bottom: 12px;
+    }
+
+    .project-stack span {
+      font-size: 11px;
+      font-family: 'DM Mono', monospace;
+      color: var(--text-muted);
+      background: var(--bg-soft);
+      border: 1px solid var(--border-light);
+      padding: 2px 7px;
+      border-radius: 4px;
+      display: inline-block;
+      margin: 2px 2px 0 0;
+    }
+
+    /* CONTACT */
+    .contact-link {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 13.5px;
+      color: var(--text-secondary);
+      text-decoration: none;
+      margin-bottom: 10px;
+      transition: color 0.2s;
+    }
+
+    .contact-link:hover { color: var(--blue); }
+
+    .contact-link-icon {
+      width: 32px; height: 32px;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      color: var(--text-secondary);
+      flex-shrink: 0;
+    }
+
+    .form-control {
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      font-size: 14px;
+      font-family: 'DM Sans', sans-serif;
+      color: var(--text-primary);
+      padding: 9px 12px;
+    }
+
+    .form-control:focus {
+      border-color: var(--blue);
+      box-shadow: none;
+    }
+
+    .form-label {
+      font-size: 12px;
+      color: var(--text-muted);
+      font-weight: 500;
+      margin-bottom: 5px;
+    }
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid var(--border-light);
+      padding: 1.75rem 0;
+      text-align: center;
+      font-size: 13px;
+      color: var(--text-muted);
+      font-family: 'DM Mono', monospace;
+    }
+
+    footer span { color: var(--blue); }
+
+    /* ABOUT IMAGE */
+    .about-img-wrap {
+      position: relative;
+      border-radius: 16px;
+      overflow: hidden;
+      height: 400px;
+    }
+
+    .about-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+    }
+
+    /* HERO IMAGE */
+    .hero-img-wrap {
+      position: relative;
+      border-radius: 16px;
+      overflow: hidden;
+      height: 460px;
+    }
+
+    .hero-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+    }
+
+    .hero-img-credit {
+      position: absolute;
+      bottom: 10px;
+      right: 12px;
+      font-size: 10px;
+      font-family: 'DM Mono', monospace;
+      color: rgba(255,255,255,0.6);
+      background: rgba(0,0,0,0.3);
+      padding: 3px 8px;
+      border-radius: 4px;
+    }
+
+    /* FADE IN */
+    .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.5s ease, transform 0.5s ease; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+    /* CODE WINDOW */
+    .code-window {
+      background: #0F1117;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid #2A2D3A;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.12);
+    }
+
+    .code-topbar {
+      background: #1A1D27;
+      padding: 10px 16px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      border-bottom: 1px solid #2A2D3A;
+    }
+
+    .code-dot {
+      width: 12px; height: 12px;
+      border-radius: 50%;
+      display: inline-block;
+    }
+
+    .code-filename {
+      font-size: 12px;
+      font-family: 'DM Mono', monospace;
+      color: #6B7280;
+      margin-left: 8px;
+    }
+
+    .code-body {
+      padding: 1.5rem;
+      overflow-x: auto;
+    }
+
+    .code-body pre {
+      margin: 0;
+      font-family: 'DM Mono', monospace;
+      font-size: 13px;
+      line-height: 1.8;
+      color: #ABB2BF;
+    }
+
+    .c-keyword { color: #C678DD; }
+    .c-fn      { color: #61AFEF; }
+    .c-str     { color: #98C379; }
+    .c-attr    { color: #E06C75; }
+    .c-tag     { color: #E06C75; }
+    .c-bool    { color: #D19A66; }
+    .c-comment { color: #5C6370; font-style: italic; }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#home">yan<span>.</span>dev</a>
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navMenu">
+        <ul class="navbar-nav gap-3">
+          <li class="nav-item"><a class="nav-link" href="#tentang">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skill">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#project">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="home">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+          <div class="hero-eyebrow">Available for work</div>
+          <h1 class="hero-title">Hi, I'm<br><strong>Yan Yan Permana</strong></h1>
+          <p class="hero-desc">Front End Developer dengan 5+ tahun pengalaman membangun aplikasi web untuk industri properti. Fokus pada React.js, Next.js, dan clean UI development.</p>
+          <div class="d-flex gap-3 flex-wrap mb-4">
+            <a href="#project" class="btn-primary-custom">See My Work →</a>
+            <a href="#contact" class="btn-ghost-custom">Get in Touch</a>
+          </div>
+          <div class="d-flex gap-3 mt-2">
+            <a href="https://github.com/yanyan-permana" target="_blank" class="social-icon" title="GitHub">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577v-2.165c-3.338.726-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.09-.745.083-.729.083-.729 1.205.084 1.84 1.237 1.84 1.237 1.07 1.834 2.807 1.304 3.492.997.108-.775.418-1.305.762-1.605-2.665-.3-5.467-1.332-5.467-5.93 0-1.31.468-2.38 1.235-3.22-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.3 1.23A11.5 11.5 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.29-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.91 1.235 3.22 0 4.61-2.807 5.625-5.479 5.92.43.372.823 1.102.823 2.222v3.293c0 .322.218.694.825.576C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12z"/></svg>
+            </a>
+            <a href="https://www.youtube.com/@pemulacoding" target="_blank" class="social-icon" title="YouTube">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
+            <a href="https://linkedin.com/in/yan-yan-permana" target="_blank" class="social-icon" title="LinkedIn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-6 d-none d-lg-block">
+          <div class="hero-img-wrap">
+            <img src="assets/waterfall.jpg" alt="Nature" class="hero-img" />
+            <div class="hero-img-credit">Photo by Muhammad Kamran Khan / Unsplash</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="tentang" class="bg-soft">
+    <div class="container fade-in">
+      <div class="section-label">01 / about</div>
+      <h2 class="section-title">Tentang Saya</h2>
+      <div class="row g-5 align-items-center">
+        <div class="col-md-5">
+          <div class="about-img-wrap">
+            <img src="assets/nature.jpg" alt="Nature" class="about-img" />
+            <div class="hero-img-credit">Photo by Muhammad Kamran Khan / Unsplash</div>
+          </div>
+        </div>
+        <div class="col-md-7">
+          <p class="text-secondary lh-lg">Saya adalah Front End Developer yang fokus membangun aplikasi web untuk industri properti. Saat ini bekerja mengembangkan software manajemen properti untuk developer perumahan.</p>
+          <p class="text-secondary lh-lg">Berpengalaman membangun UI yang responsif dan interaktif menggunakan React.js dan Next.js, serta berkolaborasi dengan tim Back End dalam integrasi API. Aktif berbagi konten coding di YouTube channel <strong>Pemula Coding</strong>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skill">
+    <div class="container fade-in">
+      <div class="section-label">02 / skills</div>
+      <h2 class="section-title">Tech Stack</h2>
+      <div class="row g-3">
+        <div class="col-sm-6 col-lg-3">
+          <div class="skill-category">
+            <div class="skill-category-title">Frontend</div>
+            <span class="skill-tag highlight">React.js</span>
+            <span class="skill-tag highlight">Next.js</span>
+            <span class="skill-tag highlight">Ant Design</span>
+            <span class="skill-tag">JavaScript</span>
+            <span class="skill-tag">HTML</span>
+            <span class="skill-tag">CSS</span>
+            <span class="skill-tag">Bootstrap</span>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+          <div class="skill-category">
+            <div class="skill-category-title">Backend</div>
+            <span class="skill-tag highlight">PHP</span>
+            <span class="skill-tag highlight">Laravel</span>
+            <span class="skill-tag">CodeIgniter</span>
+            <span class="skill-tag">MySQL</span>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+          <div class="skill-category">
+            <div class="skill-category-title">Tools</div>
+            <span class="skill-tag highlight">Git</span>
+            <span class="skill-tag">VS Code</span>
+            <span class="skill-tag">GitHub</span>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+          <div class="skill-category">
+            <div class="skill-category-title">Learning</div>
+            <span class="skill-tag highlight">TypeScript</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- PROJECTS -->
+  <section id="project" class="bg-soft">
+    <div class="container fade-in">
+      <div class="section-label">03 / projects</div>
+      <h2 class="section-title">Project</h2>
+      <div class="row g-3">
+        <div class="col-sm-6 col-lg-4">
+          <div class="project-card">
+            <div class="project-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13" rx="2"/><path d="M16 8h4l3 5v3h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+            </div>
+            <div class="project-title">Putra Sunda Trans</div>
+            <div class="project-desc">Aplikasi pemesanan tiket bus online. Pengguna bisa pilih rute, pilih kursi, dan bayar — semuanya dalam satu platform.</div>
+            <div class="project-stack"><span>Next.js 15</span><span>TypeScript</span><span>Ant Design</span><span>Supabase</span><span>Vercel</span></div>
+            <div class="mt-2">
+              <a href="https://putra-sunda-trans.vercel.app/" target="_blank" style="font-size: 12px; color: var(--blue); text-decoration: none; display: inline-flex; align-items: center; gap: 4px;">
+                Live Demo →
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-4">
+          <div class="project-card">
+            <div class="project-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+            </div>
+            <div class="project-title">E-Voting OSIS</div>
+            <div class="project-desc">Aplikasi pemilihan ketua OSIS secara online. Dibuat saat pandemi agar pemilihan tetap bisa berjalan secara daring.</div>
+            <div class="project-stack"><span>Laravel 7</span><span>Bootstrap 5</span><span>MySQL</span></div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4">
+          <div class="project-card">
+            <div class="project-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+            </div>
+            <div class="project-title">Laramart POS</div>
+            <div class="project-desc">Aplikasi Point of Sale untuk minimarket. Fitur mencakup kasir, manajemen stok, dan laporan penjualan.</div>
+            <div class="project-stack"><span>Laravel 7</span><span>Bootstrap 4</span><span>MySQL</span></div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4">
+          <div class="project-card">
+            <div class="project-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            </div>
+            <div class="project-title">Absensi QR Code</div>
+            <div class="project-desc">Sistem absensi wisudawan berbasis QR Code untuk kampus STTYBSI Tasikmalaya. Termasuk penomoran kursi otomatis.</div>
+            <div class="project-stack"><span>CodeIgniter 3</span><span>Bootstrap 4</span><span>QR Code</span></div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4">
+          <div class="project-card">
+            <div class="project-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            </div>
+            <div class="project-title">E-Jurnal Prakerin</div>
+            <div class="project-desc">Monitoring kinerja siswa magang secara online untuk B One Corporation. Pelaporan jurnal harian secara daring.</div>
+            <div class="project-stack"><span>Laravel 7</span><span>Bootstrap 4</span><span>MySQL</span></div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4">
+          <div class="project-card">
+            <div class="project-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <div class="project-title">PPDB SMK Muhammadiyah</div>
+            <div class="project-desc">Sistem PPDB online untuk SMK Muhammadiyah. Project skripsi mahasiswa yang dibangun dengan CI3.</div>
+            <div class="project-stack"><span>CodeIgniter 3</span><span>Bootstrap 4</span><span>MySQL</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="container fade-in">
+      <div class="section-label">04 / contact</div>
+      <h2 class="section-title">Get in Touch</h2>
+      <div class="row g-5 align-items-start">
+        <div class="col-md-5">
+          <p class="text-secondary lh-lg mb-4">Punya pertanyaan atau mau ngobrol soal project? Feel free to reach out!</p>
+          <a href="mailto:deyanyan6@gmail.com" class="contact-link"><div class="contact-link-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>deyanyan6@gmail.com</a>
+          <a href="https://wa.me/6289536115248" target="_blank" class="contact-link"><div class="contact-link-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg></div>+62 895-3611-52485</a>
+          <a href="https://github.com/yanyan-permana" target="_blank" class="contact-link"><div class="contact-link-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577v-2.165c-3.338.726-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.09-.745.083-.729.083-.729 1.205.084 1.84 1.237 1.84 1.237 1.07 1.834 2.807 1.304 3.492.997.108-.775.418-1.305.762-1.605-2.665-.3-5.467-1.332-5.467-5.93 0-1.31.468-2.38 1.235-3.22-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.3 1.23A11.5 11.5 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.29-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.91 1.235 3.22 0 4.61-2.807 5.625-5.479 5.92.43.372.823 1.102.823 2.222v3.293c0 .322.218.694.825.576C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12z"/></svg></div>github.com/yanyan-permana</a>
+          <a href="https://linkedin.com/in/yan-yan-permana" target="_blank" class="contact-link"><div class="contact-link-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></div>linkedin.com/in/yan-yan-permana</a>
+          <a href="https://www.youtube.com/@pemulacoding" target="_blank" class="contact-link"><div class="contact-link-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></div>@pemulacoding</a>
+        </div>
+        <div class="col-md-7">
+          <div class="mb-3">
+            <label class="form-label">Nama</label>
+            <input type="text" class="form-control" placeholder="Nama kamu" />
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Email</label>
+            <input type="email" class="form-control" placeholder="email@contoh.com" />
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Pesan</label>
+            <textarea class="form-control" rows="4" placeholder="Tulis pesan kamu..."></textarea>
+          </div>
+          <a href="mailto:deyanyan6@gmail.com" class="btn-primary-custom">Kirim Pesan →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    © 2026 <span>Yan Yan Permana</span> — Built with HTML, CSS & Bootstrap
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
